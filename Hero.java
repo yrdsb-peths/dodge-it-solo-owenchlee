@@ -5,8 +5,11 @@ public class Hero extends Actor
     boolean atTop = true;
     
     public void act()
-    {
+    {   
+        String key = Greenfoot.getKey();
         if(Greenfoot.mouseClicked(null)){
+            atTop = !atTop;
+        } else if ("space".equals(key)){
             atTop = !atTop;
         }
         
@@ -14,6 +17,6 @@ public class Hero extends Actor
             setLocation(100, 100);
         } else{
             setLocation(100, 300);
-        }
+        } 
     }
 }
